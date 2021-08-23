@@ -5,7 +5,7 @@ from tensorflow.keras import backend as K
 
 from tensorflow_probability import distributions as tfp
 
-
+# this is 
 class DenseForSparse(layers.Layer):
     '''
         Dense layer where the input is a sparse matrix.
