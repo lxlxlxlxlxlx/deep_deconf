@@ -21,10 +21,10 @@ def filter_triplets_exposure(raw_data, min_ucount, min_icount):
     for i in range(3):
         if min_icount > 0:
             i_counts = get_counts(new_data, 'vid')
-            new_data = new_data[new_data['vid'].isin(i_counts.index[i_counts >= min_icount])]
+            new_data = new_data[new_data['vid'].isin(i_counts[i_counts >= min_icount].index)]
         if min_ucount > 0:
             u_counts = get_counts(new_data, 'uid')
-            new_data = new_data[new_data['uid'].isin(u_counts.index[u_counts >= min_ucount])]
+            new_data = new_data[new_data['uid'].isin(u_counts[u_counts >= min_ucount].index)]
     return new_data
 
 
